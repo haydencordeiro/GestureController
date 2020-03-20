@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KAP Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="first.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+					Gesture Controller
+				</span>
+                <!--
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <span class="label-input100">Your Name</span>
+                    <input class="input100" type="text" name="name" placeholder="Enter your name">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <span class="label-input100">Email</span>
+                    <input class="input100" type="text" name="email" placeholder="Enter your email addess">
+                    <span class="focus-input100"></span>
+				</div>
+				-->
+
+                <!-- Gesture 0 start -->
+
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Gesture 1</span>
+                    <div>
+                        <select class="selection-2" name="gesture1" id="G0">
+							<option value="moodle">Moodle</option>
+  							<option value="snap_windows">Snap windows</option>
+							<option value="change_tab">Change tab</option>
+							<option value="back_one_page">Back one page (Browser)</option>
+							<option value="maximize">Maximize</option>
+							<option value="open_apps">Open apps</option>
+						</select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+                <!-- Gesture 0 end -->
+
+                <!-- Gesture 1 start -->
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Gesture 2</span>
+                    <div>
+                        <select class="selection-2" name="gesture1" id="G1">
+							<option value="moodle">Moodle</option>
+  							<option value="snap_windows">Snap windows</option>
+							<option value="change_tab">Change tab</option>
+							<option value="back_one_page">Back one page (Browser)</option>
+							<option value="maximize">Maximize</option>
+							<option value="open_apps">Open apps</option>
+						</select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+                <!-- Gesture 1 end -->
+                <!-- save -->
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" onclick="SaveGestures();end()">
+							<span>
+								Click Me
+								<!-- <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i> -->
+							</span>
+						</button>
+                    </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+					Multiple Apps
+				</span>
+                <!-- <br>
+                <button onclick="SaveGestures()">Click me</button> -->
+                <!-- save end -->
+                <div class="wrap-input100 validate-input" data-validate="App Name is required">
+                    <span class="label-input100">Multi Apps Details</span>
+                    <input class="input100" type="text" id="open_apps" placeholder="Enter app names with comma">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" onclick="getApps();">
+							<span>
+								Confirm
+								<!-- <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i> -->
+							</span>
+						</button>
+                    </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+					Moodle Login
+				</span>
+                <span class="label">Moodle Login</span>
+                <br>
+                <div class="wrap-input100 validate-input" data-validate="Moodle Login Details required">
+                    <span class="label-input100">Username</span>
+                    <input class="input100" type="text" id="id" placeholder="Username">
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Password</span>
+                    <input class="input100" type="password" id="pass" placeholder="Password">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" onclick="getInputValue();">
+							<span>
+								Confirm
+								<!-- <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i> -->
+							</span>
+						</button>
+                    </div>
+                </div>
+                <br><br>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="wrap-input100 input100-select">
+        <span class="label-input100">Budget</span>
+        <div>
+            <select class="selection-2" name="budget">
+							<option>Select Budget</option>
+							<option>1500 $</option>
+							<option>2000 $</option>
+							<option>2500 $</option>
+						</select>
+        </div>
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Message is required">
+        <span class="label-input100">Message</span>
+        <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+        <span class="focus-input100"></span>
+    </div>
+  -->
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" onclick="end();">
+							<span>
+								Start
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+</body>
+
+</html>

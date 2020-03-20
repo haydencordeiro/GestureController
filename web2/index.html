@@ -1,0 +1,61 @@
+<html>
+<title>GUI</title>
+<script type="text/javascript" src="first.js"></script>
+<script type="text/javascript" src="/eel.js"></script>
+
+<!-- Gesture 0 start -->
+<label for="G0">Choose a Gesture 1:</label>
+<select id="G0">
+  <option value="moodle">moodle</option>
+  <option value="snap_windows">snap windows</option>
+  <option value="change_tab">change tab</option>
+  <option value="back_one_page">back one page (browser)</option>
+  <option value="maximize">maximize</option>
+  <option value="open_apps">open apps</option>
+</select> 
+<br>
+<!-- Gesture 0 end -->
+
+<!-- Gesture 1 start -->
+<label for="G1">Choose a Gesture 2:</label>
+<select id="G1">
+  <option value="moodle">moodle</option>
+  <option value="snap_windows">snap windows</option>
+  <option value="change_tab">change tab</option>
+  <option value="back_one_page">back one page (browser)</option>
+  <option value="maximize">maximize</option>
+  <option value="open_apps">open apps</option>
+</select> 
+<!-- Gesture 0 end -->
+
+<!-- save -->
+<br>
+ <button onclick="SaveGestures()">Click me</button> 
+<!-- save end -->
+
+<!-- multi apps -->
+<br>
+<p>multi apps Details Here</p>
+<label for="uname"><b>app names seprated by comma</b></label>
+<input id="open_apps" type="text" placeholder="Enter app names with comma" >
+<br>
+<button type="button" onclick="getApps();">Confirm</button>
+
+<!-- muti apps end -->
+
+<!-- moodel -->
+<br>
+<p>moodle Details Here</p>
+<label for="uname"><b>Username</b></label>
+<input id="id" type="text" placeholder="Enter Username" >
+<br>
+<label for="psw"><b>Password</b></label>
+<input id="pass" type="password" placeholder="Enter Password" >
+<br>
+<button type="button" onclick="getInputValue();">Confirm</button>
+<br>
+<!-- moodle end-->
+
+
+<button type="button" onclick="end();">Start</button>
+</html>

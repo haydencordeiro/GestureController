@@ -1,0 +1,6 @@
+selenium==3.141.0
+simplejson==3.13.2
+pyserial==3.4
+serial==0.0.97
+pyautogui
+eel	
