@@ -6,14 +6,7 @@ import os
 
 
 eel.init('web')
-my_options={
-	'mode':'chrome',
-	'host':'localhost',
-	'port':8080,
-	'chromeFlags': ['--start-fullscreen']
 
-
-}
 
 ug=[-1,-1]
 def Save():
@@ -24,6 +17,7 @@ def Save():
 @eel.expose
 def Index0(param1):
     global ug
+    print('here')
     ug[0]=param1
     Save()
     print(ug)
@@ -57,6 +51,6 @@ def end():
 	os.system('python3 main.py')
 	
 
-eel.start('index.html',option=my_options)
+eel.start('index.html')
 
 
