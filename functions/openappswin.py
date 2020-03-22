@@ -3,8 +3,9 @@ import time
 import json
 string1="hey"
 try:
-  with open("data/multi_apps.json", 'r') as ma:
+  with open("../data/all_user_data.json", 'r') as ma:
       string1 =json.load(ma)
+      string1=string1['multi_apps']
 except:
 	string1=""
 

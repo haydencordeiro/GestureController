@@ -1,0 +1,16 @@
+1584812249662	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeANFXf"
+1584812251027	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584812252487	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584812252487	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584812252488	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584812252488	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1584812256006	Marionette	INFO	Listening on port 36615
+1584812256089	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://moodle.dbit.in/, line 113: TypeError: require is not a function
+JavaScript error: https://moodle.dbit.in/, line 124: TypeError: M.yui.add_module is not a function
+JavaScript error: https://moodle.dbit.in/, line 136: TypeError: M.util is undefined
+JavaScript error: http://moodle.dbit.in/lib/javascript.php/1520241515/lib/requirejs/require.min.js, line 12: Error: Script error for: jqueryprivate
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: http://moodle.dbit.in/lib/javascript.php/1520241515/lib/requirejs/require.min.js, line 12: Error: Script error for: jqueryprivate
+http://requirejs.org/docs/errors.html#scripterror
+1584812275280	Marionette	INFO	Stopped listening on port 36615

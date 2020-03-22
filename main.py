@@ -11,10 +11,10 @@ import psutil
 
 
 ug=[]
-try:
-    ser = serial.Serial('/dev/ttyACM1', 9600)
-except:
-    ser = serial.Serial('/dev/ttyACM0', 9600)
+# try:
+#     ser = serial.Serial('/dev/ttyACM1', 9600)
+# except:
+#     ser = serial.Serial('/dev/ttyACM0', 9600)
 
 #ag=['moodle','snap_windows','maximize','change_tab','open_apps','screenshot','open_apps_win']
 
@@ -33,8 +33,10 @@ def checkIfProcessRunning(processName):
 def Load():
 	global ug
 	try:
-	  with open("data/ug.json", 'r') as f:
+	  with open("data/all_user_data.json", 'r') as f:
 	      ug = json.load(f)
+	      ug=ug['ug']
+	     
 	except:
 		ug=[-1,-1]
 
@@ -71,12 +73,12 @@ def VLC(i):
 
 # Load()
 # print('start',ug[0])
-# CallFunction(ug[0])
-while True:
-	Load()
-	thing = ser.readline().decode()
-	a=int(thing)
-	if checkIfProcessRunning('VLC'):
-		VLC(a)
-	else:	
-		CallFunction(ug[a])
+CallFunction('moodle')
+# while True:
+# 	Load()
+# 	thing = ser.readline().decode()
+# 	a=int(thing)
+# 	if checkIfProcessRunning('VLC'):
+# 		VLC(a)
+# 	else:	
+# 		CallFunction(ug[a])

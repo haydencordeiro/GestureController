@@ -2,9 +2,11 @@ from selenium import webdriver
 from time import sleep
 import json
 try:
-  with open("data/moodleLogin.json", 'r') as f:
-      cred = json.load(f)
-except:
+	with open("../data/all_user_data.json", 'r') as f:
+	  cred = json.load(f)
+	  cred=cred['moodleInfo']
+	print(cred)
+except :
 	cred=['','']
 
 def Moodle():

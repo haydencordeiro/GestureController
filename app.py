@@ -11,8 +11,11 @@ eel.init('web')
 ug=[-1,-1]
 def Save():
 	global ug
-	with open("data/ug.json", 'w') as f:
-		json.dump(ug, f, indent=2) 
+	with open("data/all_user_data.json", 'r') as f:
+		d = json.load(f)
+	d['ug']=ug
+	with open("data/all_user_data.json", 'w') as k:
+		json.dump(d, k, indent=2) 
 
 @eel.expose
 def Index0(param1):
@@ -34,14 +37,20 @@ def moodleLogin(p1,p2):
 	moodleInfo=['','']
 	moodleInfo[0]=str(p1)
 	moodleInfo[1]=str(p2)
-	with open("data/moodleLogin.json", 'w') as k:
-		json.dump(moodleInfo, k, indent=2)
+	with open("data/all_user_data.json", 'r') as f:
+		d = json.load(f)
+	d['moodleInfo']=moodleInfo
+	with open("data/all_user_data.json", 'w') as k:
+		json.dump(d, k, indent=2) 
 
 @eel.expose
 def multi_apps(string1):
 	print(string1)
-	with open("data/multi_apps.json", 'w') as k:
-		json.dump(string1, k, indent=2)	
+	with open("data/all_user_data.json", 'r') as f:
+		d = json.load(f)
+	d['multi_apps']=string1
+	with open("data/all_user_data.json", 'w') as k:
+		json.dump(d, k, indent=2) 
 
 
     
